@@ -14,7 +14,7 @@ def decode(password):
     for digit in password:
         decode_digit = str((int(digit) - 3))
         decode_password += decode_digit
-        return decode_password
+    return decode_password
 
 
 def main():
