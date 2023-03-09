@@ -9,6 +9,14 @@ def encode(password):
 
     return output
 
+def decode(password):
+    decode_password = ""
+    for digit in password:
+        decode_digit = str((int(digit) - 3))
+        decode_password += decode_digit
+        return decode_password
+
+
 def main():
     password = ""
     encoded_password = ""
@@ -30,6 +38,8 @@ Please enter an option: """, end="")
             print("Your password has been encoded and stored!\n")
         elif option == "3":
             break
+        elif option == "2":
+            print(f"The encoded password is {encoded_password}, and the originl password is {decode(encoded_password)}.")
 
 
 if __name__ == "__main__":
